@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8sp"
+    android:backgroundTint="#A2DBFA"
+    android:layout_marginVertical="2sp"
+    android:layout_marginHorizontal="5sp"
+    android:paddingVertical="8dp">
+  <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+           <TextView
+               android:id="@+id/statename"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="30sp"
+               android:textSize="19sp"
+               android:text="state"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+               android:layout_marginVertical="5sp"/>
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_below="@+id/statename"
+          android:weightSum="10">
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="A : "
+              android:textColor="#185ADB"
+              android:textStyle="bold"
+              android:paddingVertical="8sp"
+              android:layout_marginStart="10dp"
+              android:layout_weight="1"/>
+          <TextView
+              android:id="@+id/stateactive"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="4444444"
+              android:textColor="#185ADB"
+              android:layout_weight="1"
+              android:paddingVertical="8sp"/>
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="D : "
+              android:textStyle="bold"
+              android:layout_weight="1"
+              android:textColor="#D54C4C"
+              android:paddingVertical="8sp"
+              android:layout_marginStart="10dp"/>
+          <TextView
+              android:id="@+id/statedeaths"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="4444444"
+              android:textColor="#D54C4C"
+              android:layout_weight="1"
+              android:paddingVertical="8sp"/>
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="C : "
+              android:layout_weight="1"
+              android:textStyle="bold"
+              android:textColor="#21094E"
+              android:paddingVertical="8sp"
+              android:layout_marginStart="10dp"/>
+          <TextView
+              android:id="@+id/stateconfirmed"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="4444444"
+              android:textColor="#21094E"
+              android:layout_weight="1"
+              android:paddingVertical="8sp"/>
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="R : "
+              android:layout_weight="1"
+              android:textStyle="bold"
+              android:textColor="#01937C"
+              android:paddingVertical="8sp"
+              android:layout_marginStart="10dp"/>
+          <TextView
+              android:id="@+id/staterecovered"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="4444444"
+              android:textColor="#01937C"
+              android:layout_weight="1"
+              android:paddingVertical="8sp"/>
+
+      </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
