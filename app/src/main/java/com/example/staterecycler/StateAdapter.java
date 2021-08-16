@@ -68,10 +68,12 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.Viewholder>{
                 String name = stateClass.getState();
                 String active = stateClass.getActive();
                 String deaths = stateClass.getDeaths();
-//                Toast.makeText(context, "position = "+String.valueOf(position), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context,StateDetail.class);
                 intent.putExtra("state",name);
                 intent.putExtra("active",active);
+                intent.putExtra("deaths",stateClass.getDeaths());
+                intent.putExtra("confirmed",stateClass.getConfirmed());
+                intent.putExtra("recovered",stateClass.getDeaths());
                 itemView.getContext().startActivity(intent);
             }
             catch (Exception e){
@@ -80,70 +82,4 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.Viewholder>{
         }
     }
 
-//    LayoutInflater inflater;
-//    List<StateClass> Statedata;
-//
-//    public StateAdapter(Context ctx,List<StateClass> Statedata){
-//        this.inflater = LayoutInflater.from(ctx);
-//        this.Statedata = Statedata;
-//    }
-//
-//    @NonNull
-//    @Override
-//    public StateAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        View view = inflater.inflate(R.layout.state_view,parent,false);
-//        return new Viewholder(view);
-//    }
-//
-//    @Override
-//    public void onBindViewHolder(@NonNull StateAdapter.Viewholder holder, int position) {
-//        StateClass statedata = Statedata.get(position);
-//        holder.statename.setText(Statedata.get(position).getState());
-//        holder.stateconfirmed.setText(Statedata.get(position).getConfirmed());
-//        holder.staterecovered.setText(Statedata.get(position).getRecovered());
-//        holder.statedeaths.setText(Statedata.get(position).getDeaths());
-//        holder.stateactive.setText(Statedata.get(position).getActive());
-//        holder.itemView.setOnClickListener((view) ->{
-//            Intent intent = new Intent()
-//        });
-//
-//    }
-//
-//    @Override
-//    public int getItemCount() {
-//        return Statedata.size();
-//    }
-//
-//    public class Viewholder extends RecyclerView.ViewHolder implements View.OnClickListener {
-//        TextView statename,stateactive,statedeaths,stateconfirmed,staterecovered;
-//        public Viewholder(@NonNull View itemView) {
-//            super(itemView);
-//            statename = itemView.findViewById(R.id.statename);
-//            stateactive = itemView.findViewById(R.id.stateactive);
-//            statedeaths = itemView.findViewById(R.id.statedeaths);
-//            staterecovered = itemView.findViewById(R.id.staterecovered);
-//            stateconfirmed = itemView.findViewById(R.id.stateconfirmed);
-//            itemView.setOnClickListener((View.OnClickListener) this);
-//
-//
-//        }
-//
-//       @Override
-//       public void onClick(View v) {
-//           int position = this.getAbsoluteAdapterPosition();
-//           StateClass state = Statedata.get(position);
-//           String name = state.getState();
-//            String active = state.getActive();
-//            String deaths = state.getDeaths();
-//            Toast.makeText(itemView.getContext(), "clicked position = "+ String.valueOf(position)+ "state = "+name+"active= "+active+" deaths= "+deaths, Toast.LENGTH_SHORT).show();
-//           Intent intent = new Intent(itemView.getContext(), StateDetail.class);
-////            intent.putExtra("active",state.getActive());
-////           intent.putExtra("recovered",state.getRecovered());
-////           intent.putExtra("deaths",state.getDeaths());
-////           intent.putExtra("confirmed",state.getConfirmed());
-////           intent.putExtra("state",state.getState());
-//            itemView.getContext().startActivity(intent);
-//
-//        }
-    //}
 }
